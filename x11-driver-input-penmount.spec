@@ -37,6 +37,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/input/penmount_drv.la
 %{_libdir}/xorg/modules/input/penmount_drv.so
-%{_mandir}/man4/penmount.4.bz2
+%{_mandir}/man4/penmount.*
 
 
