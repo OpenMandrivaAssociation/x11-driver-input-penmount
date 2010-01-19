@@ -1,10 +1,11 @@
 Name: x11-driver-input-penmount
 Version: 1.4.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X.org input driver for PenMount devices
 Group: System/X11
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-input-penmount-%{version}.tar.bz2
+Patch0: xf86-input-penmount-1.4.0-cope-with-xinput-abi-7.patch
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: x11-proto-devel >= 1.4
@@ -17,6 +18,7 @@ Penmount is an X.org input driver for PenMount devices.
 
 %prep
 %setup -q -n xf86-input-penmount-%{version}
+%patch0 -p1
 
 %build
 %configure2_5x
