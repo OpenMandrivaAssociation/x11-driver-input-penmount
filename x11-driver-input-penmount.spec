@@ -1,6 +1,6 @@
 Name: x11-driver-input-penmount
 Version: 1.4.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X.org input driver for PenMount devices
 Group: System/X11
 URL: http://xorg.freedesktop.org
