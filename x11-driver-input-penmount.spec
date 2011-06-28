@@ -1,7 +1,7 @@
-%define gitdate 20110609
+%define gitdate %nil
 
 Name: x11-driver-input-penmount
-Version: 1.4.99
+Version: 1.5.0
 Release: %mkrel 1%{?gitdate:.%{gitdate}}
 Summary: X.org input driver for PenMount devices
 Group: System/X11
