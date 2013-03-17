@@ -1,17 +1,15 @@
+Summary:	X.org input driver for PenMount devices
 Name:		x11-driver-input-penmount
 Version:	1.5.0
-Release:	6
-Summary:	X.org input driver for PenMount devices
+Release:	7
 Group:		System/X11
 License:	MIT
-URL:		http://xorg.freedesktop.org
+Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-penmount-%{version}.tar.bz2
 
-BuildRequires:	x11-proto-devel >= 1.4
-BuildRequires:	pkgconfig(xorg-server) >= 1.13
-BuildRequires:	x11-util-macros >= 1.0.1
-Conflicts:	x11-server < 1.4
-
+BuildRequires:	pkgconfig(xproto)
+BuildRequires:	pkgconfig(xorg-server)
+BuildRequires:	pkgconfig(xorg-macros)
 Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 
 %description
@@ -32,3 +30,4 @@ autoreconf -fiv
 %doc COPYING
 %{_libdir}/xorg/modules/input/penmount_drv.so
 %{_mandir}/man4/penmount.*
+
