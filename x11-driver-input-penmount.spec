@@ -1,22 +1,33 @@
-Summary:	X.org input driver for PenMount devices
-Name:		x11-driver-input-penmount
-Version:	1.5.0
-Release:	12
+%define Werror_cflags %nil
+
+Summary:	X.org input driver for CMT devices
+Name:		x11-driver-input-cmt
+Version:	0.1
+Release:	0.1
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
-Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-penmount-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-cmt-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(xproto)
 BuildRequires:	pkgconfig(xorg-server)
 BuildRequires:	pkgconfig(xorg-macros)
+BuildRequires:	libgestures-devel
+BuildRequires:	evdevc-devel
 Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 
 %description
-Penmount is an X.org input driver for PenMount devices.
+Is an X.org input driver for CMT devices.
+
+%package	devel
+Summary:	Development files for %{name}
+Group:		Development/C	
+
+%description
+Header files for %{name}
 
 %prep
-%setup -qn xf86-input-penmount-%{version}
+%setup -qn xf86-input-cmt-%{version}
 autoreconf -fiv
 
 %build
@@ -27,7 +38,8 @@ autoreconf -fiv
 %makeinstall_std
 
 %files
-%doc COPYING
-%{_libdir}/xorg/modules/input/penmount_drv.so
-%{_mandir}/man4/penmount.*
+%{_libdir}/xorg/modules/input/cmt_drv.so
 
+%files devel
+%{_includedir}/xorg/cmt-properties.h
+%{_libdir}/pkgconfig/xorg-cmt.pc
