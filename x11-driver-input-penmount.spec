@@ -3,7 +3,7 @@
 Summary:	X.org input driver for CMT devices
 Name:		x11-driver-input-cmt
 Version:	0.1
-Release:	0.2
+Release:	0.3
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
