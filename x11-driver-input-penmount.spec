@@ -1,7 +1,7 @@
 Summary:        X.org input driver for PenMount devices
 Name:           x11-driver-input-penmount
 Version:        1.5.0
-Release:        23
+Release:        24
 Group:          System/X11
 License:        MIT
 Url:            http://xorg.freedesktop.org
@@ -20,7 +20,7 @@ Penmount is an X.org input driver for PenMount devices.
 autoreconf -fiv
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
